@@ -2,7 +2,7 @@
 
 import { FunctionComponent, useEffect, useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { CgArrowsExchangeAlt } from "react-icons/cg";
+import { RiExchangeFundsLine } from "react-icons/ri";
 import fuel from "@/public/icons/fuel-icon.svg";
 import Image from "next/image";
 import CommodityCard from "@/components/commodity-card";
@@ -16,6 +16,7 @@ import { FaX } from "react-icons/fa6";
 import { fetchData } from "@/api/authApi";
 import { LineWave } from "react-loader-spinner";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface PageProps {}
 
@@ -25,7 +26,7 @@ const Page: FunctionComponent<PageProps> = () => {
   const [loading, setLoading] = useState(false);
   const [options, setOptions] = useState({
     title: {
-      text: "Annual Fuel Expenditure",
+      text: "Hour Rice Variations",
     },
     data: getData(),
     series: [
@@ -137,13 +138,15 @@ const Page: FunctionComponent<PageProps> = () => {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <IoIosArrowBack className="text-2xl" />
+            <Link href="/market">
+              <IoIosArrowBack className="text-2xl" />
+            </Link>
             <div className="flex items-center ml-3">
               <Image src={fuel} alt="image" width={30} height={30} />
               <p className="font-semibold text-lg ml-2">
-                Fuel{" "}
+                RICE{" "}
                 <span className="text-slate-500 font-normal text-xs">
-                  (PMS)
+                  (RIC)
                 </span>
               </p>
             </div>
@@ -153,13 +156,13 @@ const Page: FunctionComponent<PageProps> = () => {
             onClick={() => setOverlay(true)}
           >
             <div className=" flex items-center justify-center w-7 h-7 rounded-full bg-blue text-white">
-              <CgArrowsExchangeAlt />
+              <RiExchangeFundsLine />
             </div>
             <p>TRADE</p>
           </div>
         </div>
         <div className="flex items-center text-xl mt-5">
-          <p className="font-semibold mr-2">N98,509.75</p>
+          <p className="font-semibold mr-2">₦75,000</p>
           <p className="text-green text-sm">+1700.254(9.77%)</p>
         </div>
 
@@ -189,7 +192,13 @@ const Page: FunctionComponent<PageProps> = () => {
           </div>
         </div>
 
-        <CommodityCard commodityIcon={fuel} />
+        <CommodityCard
+          commodityIcon={fuel}
+          name={"RICE"}
+          currentPrice={"75,000"}
+          percentChange={"9.77"}
+          symbol={"RIC"}
+        />
         <div className="flex items-center justify-between p-3 shadow-lg mt-3 rounded-lg">
           <p>Transactions</p>
           <IoIosArrowForward />
