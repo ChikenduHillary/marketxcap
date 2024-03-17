@@ -55,7 +55,7 @@ const Page: FunctionComponent<PageProps> = () => {
         />
       </div>
       {data?.length > 0 && (
-        <section className={`${!loading ? "block" : "hidden"} p-10`}>
+        <section className={`${!loading ? "block" : "hidden"} p-5 md:p-10`}>
           <div>
             <h1 className="font-semibold text-xl">
               Market is Up <span className="text-green">+11.7%</span>
@@ -88,7 +88,7 @@ const Page: FunctionComponent<PageProps> = () => {
                   name: { name, symbol, logo },
                 }) => (
                   <div key={symbol}>
-                    <Link href="/coin" className="">
+                    <Link href={`/coin/${name}`} className="">
                       <CommodityCard
                         commodityIcon={logo}
                         name={name}

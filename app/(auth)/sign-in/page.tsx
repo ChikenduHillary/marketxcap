@@ -46,8 +46,8 @@ const Page: FunctionComponent<PageProps> = () => {
   };
 
   return (
-    <section className="p-10">
-      <div className="border-[1px] border-slate-500 rounded-3xl p-16 w-[90%] max-w-[30em] mx-auto">
+    <section className="p-10 ">
+      <div className="border-[1px] border-slate-500 rounded-3xl p-6 md:p-16 w-[90%] max-w-[30em] mx-auto">
         <div className="">
           <p className="text-2xl font-bold">Sign In</p>
           <p className="text-sm text-slate-500">

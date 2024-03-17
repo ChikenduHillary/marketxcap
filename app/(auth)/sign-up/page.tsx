@@ -63,8 +63,8 @@ const Page: FunctionComponent<PageProps> = () => {
   };
 
   return (
-    <section className="p-10">
-      <div className="border-[1px] border-slate-500 rounded-3xl p-16 max-w-[30em] w-[90%] mx-auto">
+    <section className="p-5 md:p-10">
+      <div className="border-[1px] border-slate-500 rounded-3xl p-6 md:p-16 max-w-[30em] w-[90%] mx-auto">
         <div className="">
           <p className="text-2xl font-bold">Sign Up</p>
           <p className="text-slate-500">

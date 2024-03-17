@@ -55,8 +55,8 @@ const Page: FunctionComponent<PageProps> = () => {
   };
 
   return (
-    <section className="p-10">
-      <div className="border-[1px] border-slate-500 rounded-3xl p-16 w-[90%] mx-auto">
+    <section className="p-5 md:p-10">
+      <div className="border-[1px] border-slate-500 rounded-3xl p-16 max-w-[30em] w-[90%] mx-auto">
         <div className="">
           <p className="text-2xl font-bold">Verify Email</p>
           <p className="text-sm text-slate-500">
@@ -68,7 +68,7 @@ const Page: FunctionComponent<PageProps> = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-20 max-w-[40em] space-y-5"
         >
-          <div className="text-sm flex items-center justify-between max-w-[30em] mx-auto py-2">
+          <div className="text-sm flex items-center justify-between flex-wrap mx-auto py-2">
             <input
               type="text"
               {...register("code1", { required: true })}

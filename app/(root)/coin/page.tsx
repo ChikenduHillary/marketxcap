@@ -15,6 +15,7 @@ import { AgChartsReact } from "ag-charts-react";
 import { FaX } from "react-icons/fa6";
 import { fetchData } from "@/api/authApi";
 import { LineWave } from "react-loader-spinner";
+import { useRouter } from "next/router";
 
 interface PageProps {}
 
@@ -120,7 +121,7 @@ const Page: FunctionComponent<PageProps> = () => {
           lastLineColor=""
         />
       </div>
-      <section className={` ${!loading ? "block" : "hidden"} p-10`}>
+      <section className={` ${!loading ? "block" : "hidden"} p-5 md:p-10`}>
         <div
           className={` ${
             overlay ? "fixed" : "hidden"
