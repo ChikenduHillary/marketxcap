@@ -120,7 +120,7 @@ const Page: FunctionComponent<PageProps> = () => {
           lastLineColor=""
         />
       </div>
-      <section className={` ${!loading ? "flex" : "hidden"} p-10`}>
+      <section className={` ${!loading ? "block" : "hidden"} p-10`}>
         <div
           className={` ${
             overlay ? "fixed" : "hidden"
