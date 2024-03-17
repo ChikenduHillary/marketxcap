@@ -32,8 +32,8 @@ const Page: FunctionComponent<PageProps> = () => {
     series: [
       {
         xKey: "quarter",
-        yKey: "petrol",
-        yName: "Petrol",
+        yKey: "rice",
+        yName: "Rice",
         strokeWidth: 1,
         marker: {
           enabled: false,
@@ -46,39 +46,39 @@ const Page: FunctionComponent<PageProps> = () => {
     return [
       {
         quarter: "04:16",
-        petrol: 200,
+        rice: 200,
       },
       {
         quarter: "05:16",
-        petrol: 50,
+        rice: 50,
       },
       {
         quarter: "06:16",
-        petrol: 350,
+        rice: 350,
       },
       {
         quarter: "07:16",
-        petrol: 300,
+        rice: 300,
       },
       {
         quarter: "08:16",
-        petrol: 500,
+        rice: 500,
       },
       {
         quarter: "09:16",
-        petrol: 100,
+        rice: 100,
       },
       {
         quarter: "10:16",
-        petrol: 300,
+        rice: 300,
       },
       {
         quarter: "11:16",
-        petrol: 50,
+        rice: 50,
       },
       {
         quarter: "12:16",
-        petrol: 10,
+        rice: 10,
       },
     ];
   }

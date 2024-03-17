@@ -27,7 +27,7 @@ const CommodityCard: FunctionComponent<CommodityCardProps> = ({
           <p className="text-xs font-semibold text-slate-500">{symbol}</p>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col items-end">
         <p className="font-semibold">₦{currentPrice}</p>
         <p
           className={`${
