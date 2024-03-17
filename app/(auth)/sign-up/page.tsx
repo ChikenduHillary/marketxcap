@@ -10,6 +10,7 @@ import toast from "react-hot-toast";
 import { useSignUpMutation } from "@/api/authApi";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { setSignInUser } from "@/redux/features/authSlice";
+import Link from "next/link";
 
 interface PageProps {}
 
