@@ -88,7 +88,7 @@ const Page: FunctionComponent<PageProps> = () => {
                   name: { name, symbol, logo },
                 }) => (
                   <div key={symbol}>
-                    <Link href={`/coin/${name}`} className="">
+                    <Link href={"/coin"} className="">
                       <CommodityCard
                         commodityIcon={logo}
                         name={name}
